@@ -17,19 +17,29 @@ const Navbar = () => {
 
     return (
         <nav className="bg-pink-600 text-white p-4">
-            <div className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-                {
-                    isOpen ? <IoClose className="text-3xl"></IoClose> : <FaBars className="text-3xl"></FaBars>
-                }
+            <div className="max-w-7xl mx-auto">
+                <div className="flex items-center justify-between ">
+                    <div className="lg:hidden " onClick={() => setIsOpen(!isOpen)}>
+                        {
+                            isOpen ? <IoClose className="text-3xl"></IoClose> : <FaBars className="text-3xl"></FaBars>
+                        }
+                    </div>
+                    <div className=" w-full lg:w-auto text-center">
+                        <h4 className="text-2xl">Duplex Flex Nature</h4>
+                    </div>
+                    <div className="">
+                        <ul className={`lg:flex gap-12 ${isOpen ? 'top-16' : '-top-60'} absolute left-0 lg:static bg-pink-600 py-3 duration-1000 mx-auto text-center w-full`}>
+                            {
+                                routes.map(route => <LinkItem
+                                    key={route.id}
+                                    route={route}
+                                ></LinkItem>)
+                            }
+                        </ul>
+                    </div>
+                    <button className="btn">login</button>
+                </div>
             </div>
-            <ul className={`md:flex gap-12 ${isOpen ? 'top-14' : '-top-60'} absolute left-0 md:static bg-pink-600 px-6 py-3 duration-1000 mx-auto text-center w-full`}>
-                {
-                    routes.map(route => <LinkItem
-                        key={route.id}
-                        route={route}
-                    ></LinkItem>)
-                }
-            </ul>
         </nav>
     );
 };
