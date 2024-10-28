@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 
 
 const LinkItem = ({ route }) => {
     return (
         <li className="font-semibold my-2">
-            <a href={route.route}>{route.name}</a>
+            <Link to={route.route}>{route.name}</Link>
         </li>
     );
 };

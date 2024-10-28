@@ -11,9 +11,8 @@ const Navbar = () => {
     const routes = [
         { id: 1, name: "Home", route: "/" },
         { id: 2, name: "About", route: "/about" },
-        { id: 3, name: "Services", route: "/services" },
-        { id: 4, name: "Contact", route: "/contact" },
-        { id: 5, name: "Blog", route: "/blog" }
+        // { id: 3, name: "Services", route: "/services" },
+        { id: 4, name: "Users", route: "/users" },
     ];
 
 
@@ -30,7 +29,7 @@ const Navbar = () => {
                         <h4 className="text-2xl">Duplex Flex Nature</h4>
                     </div>
                     <div className="">
-                        <ul className={`lg:flex gap-12 ${isOpen ? 'top-20' : '-left-full top-20'} absolute left-0 lg:static bg-pink-600 py-3 duration-1000 mx-auto text-center w-full`}>
+                        <ul className={`lg:flex gap-12 ${isOpen ? 'top-16' : '-left-full top-16 hidden'} absolute left-0 lg:static bg-pink-600 py-3 duration-1000 mx-auto text-center w-full`}>
                             {
                                 routes.map(route => <LinkItem
                                     key={route.id}
