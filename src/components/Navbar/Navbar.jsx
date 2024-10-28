@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
         <nav className="bg-pink-600 text-white p-4">
             <div className="max-w-7xl mx-auto">
-                <div className="flex items-center justify-between ">
+                <div className="flex items-center justify-between">
                     <div className="lg:hidden " onClick={() => setIsOpen(!isOpen)}>
                         {
                             isOpen ? <IoClose className="text-3xl"></IoClose> : <FaBars className="text-3xl"></FaBars>
