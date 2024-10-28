@@ -2,6 +2,8 @@ import { useState } from "react";
 import LinkItem from "../LinkItem/LinkItem";
 import { FaBars } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
+import { AwesomeButton } from 'react-awesome-button';
+import 'react-awesome-button/dist/styles.css';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -37,7 +39,7 @@ const Navbar = () => {
                             }
                         </ul>
                     </div>
-                    <button className="btn">login</button>
+                    <AwesomeButton type="secondary">login</AwesomeButton>
                 </div>
             </div>
         </nav>
