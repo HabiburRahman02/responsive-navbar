@@ -1,12 +1,13 @@
-import { useActionData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 
 const UserDetails = () => {
-    const user = useActionData();
+    const user = useLoaderData();
     console.log(user);
     return (
-        <div>
-            <h3>Details</h3>
+        <div className="text-center text-4xl font-semibold">
+            <h3>Details || name:{user.name}</h3>
+            <p>Email: {user.email}</p>
         </div>
     );
 };
