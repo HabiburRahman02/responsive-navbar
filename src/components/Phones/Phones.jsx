@@ -1,9 +1,9 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ScatterChart, Scatter } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ScatterChart, Scatter, PieChart, Pie } from 'recharts';
 
 
-const Phones = () => {
+const Phones = ({ data }) => {
     const [phones, setPhones] = useState([]);
 
     useEffect(() => {
@@ -53,6 +53,14 @@ const Phones = () => {
                     <Tooltip cursor={{ strokeDasharray: '3 3' }} />
                     <Scatter name="A school" data={phones} fill="#8884d8" />
                 </ScatterChart>
+            </ResponsiveContainer>
+
+            {/* pie chart */}
+            <ResponsiveContainer className={'my-12'} width="100%" height="100%">
+                <PieChart width={400} height={400}>
+                    <Pie data={phones} dataKey="price" cx="50%" cy="50%" outerRadius={170} fill="green" />
+                    <Pie data={phones} dataKey="price" cx="50%" cy="50%" innerRadius={30} outerRadius={90} fill="yellow" label />
+                </PieChart>
             </ResponsiveContainer>
         </div>
     );
