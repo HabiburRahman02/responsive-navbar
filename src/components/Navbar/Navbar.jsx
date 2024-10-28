@@ -28,7 +28,7 @@ const Navbar = () => {
                         <h4 className="text-2xl">Duplex Flex Nature</h4>
                     </div>
                     <div className="">
-                        <ul className={`lg:flex gap-12 ${isOpen ? 'top-16' : '-top-60'} absolute left-0 lg:static bg-pink-600 py-3 duration-1000 mx-auto text-center w-full`}>
+                        <ul className={`lg:flex gap-12 ${isOpen ? 'top-20' : '-left-full top-20'} absolute left-0 lg:static bg-pink-600 py-3 duration-1000 mx-auto text-center w-full`}>
                             {
                                 routes.map(route => <LinkItem
                                     key={route.id}
