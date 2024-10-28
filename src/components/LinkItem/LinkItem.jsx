@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link as Lk } from "react-router-dom";
 
 
 const LinkItem = ({ route }) => {
     return (
         <li className="font-semibold my-2">
-            <Link to={route.route}>{route.name}</Link>
+            <Lk to={route.route}>{route.name}</Lk>
         </li>
     );
 };
