@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ScatterChart, Scatter } from 'recharts';
 
 
 const Phones = () => {
@@ -35,6 +35,24 @@ const Phones = () => {
                     <Tooltip />
                     <Area type="monotone" dataKey="price" stroke="#8884d8" fill="#8884d8" />
                 </AreaChart>
+            </ResponsiveContainer>
+
+            {/* scatter chart */}
+            <ResponsiveContainer width="100%" height={400}>
+                <ScatterChart
+                    margin={{
+                        top: 20,
+                        right: 20,
+                        bottom: 20,
+                        left: 20,
+                    }}
+                >
+                    <CartesianGrid />
+                    <XAxis type="number" dataKey="price" name="Weight" unit="Kg" />
+                    <YAxis type="number" dataKey="price" name="Price" unit="Tk" />
+                    <Tooltip cursor={{ strokeDasharray: '3 3' }} />
+                    <Scatter name="A school" data={phones} fill="#8884d8" />
+                </ScatterChart>
             </ResponsiveContainer>
         </div>
     );
